@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # specify the case you want to test here!
-case=case1
-
+case=case3
+version=basic
 # Build and run your final project!
 NTHU_bike:
 	g++ -g -std=c++11 -o ./bin/main ./src/*.cpp
-	./bin/main $(case)
+	./bin/main $(case) $(version)
 
 # Check your execution result is valid or not!
 CheckValid:

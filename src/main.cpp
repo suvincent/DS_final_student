@@ -7,11 +7,13 @@ int main(int argc, char** argv)
     
     auto start = std::chrono::system_clock::now();
     string selectedCase = argv[1];
-    cout << "You have set " << selectedCase << " as your path:" << "\n";
+    string version = argv[2];
+    cout << "You have set " << selectedCase << " as your testcase:" << "\n";
+    cout << "running " << version << " currently" << "\n";
     cout << "-------------------------------------------" << endl;
 
-    // insert your code here
-    cout << "start your data structure final from here!" << endl;
+    if(version == "advance") advanced(selectedCase);
+    else basic(selectedCase);
 
     // record execution time
     auto end = std::chrono::system_clock::now();
